@@ -1,6 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "Public/TankPlayerController.h"
+#include "TankPlayerController.h"
 
 void ATankPlayerController::BeginPlay()
 {
