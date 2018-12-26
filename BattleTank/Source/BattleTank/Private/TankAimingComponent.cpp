@@ -48,9 +48,9 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 		0.f,
 		0.f,
 		ESuggestProjVelocityTraceOption::DoNotTrace
-		//,FCollisionResponseParams::DefaultResponseParam,
-		//ActorsToIgnore,
-		//true
+// 		,FCollisionResponseParams::DefaultResponseParam,
+// 		ActorsToIgnore,
+// 		true
 	);
 	if (bHaveAimSolution)
 	{		
@@ -58,16 +58,16 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 // 		auto TankName = GetOwner()->GetName();
 // 		UE_LOG(LogTemp, Warning, TEXT("%s aming at %s"), *TankName, *AimDirection.ToString());
 		MoveBarrelTowards(AimDirection);
-		auto Time = GetWorld()->GetTimeSeconds();
-		UE_LOG(LogTemp, Warning, TEXT("%f: Aim solutions found"), Time);
+// 		auto Time = GetWorld()->GetTimeSeconds();
+// 		UE_LOG(LogTemp, Warning, TEXT("%f: Aim solutions found"), Time);
 
 	}
-	else
-	{
-		auto Time = GetWorld()->GetTimeSeconds();
-		UE_LOG(LogTemp, Warning, TEXT("%f: No aim solve found"), Time);
-
-	}
+// 	else
+// 	{
+// 		auto Time = GetWorld()->GetTimeSeconds();
+// 		UE_LOG(LogTemp, Warning, TEXT("%f: No aim solve found"), Time);
+// 
+// 	}
 	// If no solution found do nothing
 }
 void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
