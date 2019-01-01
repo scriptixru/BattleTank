@@ -15,15 +15,16 @@ void ATankPlayerController::Tick(float DeltaTime)
 void ATankPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
-	auto ControlledTank = GetControlledTank();
-	if (!ControlledTank)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("PlayerController not possesing a tank"));
-	}
-	else 
-	{
-		UE_LOG(LogTemp, Warning, TEXT("PlayerController possesing: %s"), *(ControlledTank->GetName()));
-	}
+
+// 	auto ControlledTank = GetControlledTank();
+// 	if (!ControlledTank)
+// 	{
+// 		UE_LOG(LogTemp, Warning, TEXT("PlayerController not possesing a tank"));
+// 	}
+// 	else 
+// 	{
+// 		UE_LOG(LogTemp, Warning, TEXT("PlayerController possesing: %s"), *(ControlledTank->GetName()));
+// 	}
 	
 }
 
