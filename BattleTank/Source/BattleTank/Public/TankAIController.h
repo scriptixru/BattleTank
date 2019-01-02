@@ -22,6 +22,8 @@ public:
 	// Called when the game starts or when spawned
 	void BeginPlay() override;
 
+	// How close can the AI tank get
+	float AcceptanceRadius = 3000.0f;
 
 	
 };
