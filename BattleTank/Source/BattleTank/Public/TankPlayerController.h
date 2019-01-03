@@ -21,8 +21,12 @@ public:
 	// Called when the game starts or when spawned
 	void BeginPlay() override;
 
-private:
+protected:
+	UFUNCTION(BlueprintCallable, Category = "Setup")
 	ATank* GetControlledTank() const;
+
+private:
+
 	//Start the tank moving the barrel so shot would hit where
 	//the crosshair intersects the world
 	void AimTowardsCrosshair();
