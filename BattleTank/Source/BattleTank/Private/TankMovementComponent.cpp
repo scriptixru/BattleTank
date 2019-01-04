@@ -34,7 +34,8 @@ void UTankMovementComponent::IntendMoveForward(float Throw)
 	//auto Name = GetName();
 	//UE_LOG(LogTemp, Warning, TEXT("Intend move forward trow: %f"), Throw);
 
-	if (!LeftTrack || !RightTrack) { return; }
+	if(!ensure(LeftTrack && RightTrack)) { return; }
+	//if (!LeftTrack || !RightTrack) { return; }
 	LeftTrack->SetThrottle(Throw);
 	RightTrack->SetThrottle(Throw);
 
@@ -42,14 +43,16 @@ void UTankMovementComponent::IntendMoveForward(float Throw)
 
 void UTankMovementComponent::IntendTurnRight(float Throw)
 {
-	if (!LeftTrack || !RightTrack) { return; }
+	if (!ensure(LeftTrack && RightTrack)) { return; }
+	//if (!LeftTrack || !RightTrack) { return; }
 	LeftTrack->SetThrottle(Throw);
 	RightTrack->SetThrottle(-Throw);
 
 }
 void UTankMovementComponent::IntendTurnLeft(float Throw)
 {
-	if (!LeftTrack || !RightTrack) { return; }
+	if (!ensure(LeftTrack && RightTrack)) { return; }
+	//if (!LeftTrack || !RightTrack) { return; }
 	LeftTrack->SetThrottle(-Throw);
 	RightTrack->SetThrottle(Throw);
 
