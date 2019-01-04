@@ -23,6 +23,7 @@ void ATank::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	TankAmingComponent = FindComponentByClass<UTankAimingComponent>();
 }
 
 
