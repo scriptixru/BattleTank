@@ -19,7 +19,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	// Called when the game starts or when spawned
-	void BeginPlay() override;
+	virtual void BeginPlay() override;
 
 	// How close can the AI tank get
 	float AcceptanceRadius = 3000.0f;
