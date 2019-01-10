@@ -20,13 +20,17 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Setup") // Consider EditDefaultsOnly
 	float AcceptanceRadius = 8000.0f;
 
-public:
+private:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	virtual void SetPawn(APawn* InPawn) override;
+
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-
+	UFUNCTION()
+	void OnPossedTankDeath();
 
 	
 };
